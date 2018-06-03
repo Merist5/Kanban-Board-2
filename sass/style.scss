@@ -1,27 +1,37 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+$white: #fff;
+$blue: #55ACEE;
+$radius: 5px;
+$border: 1px solid rgba(225, 225, 225, 0.5);
+$box: border-box;
+
 * {
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box; }
+  box-sizing: $box;
+}
 
 body {
   margin: 0;
-  color: #fff;
-  background-color: #55ACEE;
-  text-align: center; }
+  color: $white;
+  background-color: $blue;
+  text-align: center;
+}
 
 button {
-  color: #fff;
-  background-color: #55ACEE;
-  border: 1px solid rgba(225, 225, 225, 0.5);
+  color: $white;
+  background-color: $blue;
+  border: $border;
   font-weight: 300;
-  border-radius: 5px;
-  margin-bottom: 20px; }
-  button:hover {
-    background-color: #2c6aa0; }
-
+  border-radius: $radius;
+  margin-bottom: 20px;
+  &:hover {
+  background-color: #2c6aa0;
+  }
+}
 .ui-sortable {
-  min-height: 80px; }
-
+  min-height: 80px;
+}
 .btn-delete {
   position: absolute;
   right: 0;
@@ -29,71 +39,71 @@ button {
   width: 22px;
   height: 22px;
   border: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff; }
-  .btn-delete:hover {
-    background-color: #4f5b66; }
-
+  background-color: rgba(0,0,0,0.4);
+  color: $white;
+  &:hover {
+  background-color: #4f5b66;
+  }
+}
 .board h1 {
-  margin-left: 8px; }
-
+  margin-left: 8px;
+}
 .column-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center; }
-
+  justify-content: center;
+}
 .column {
   order: 1;
   min-width: 300px;
   min-height: 50vh;
   background-color: #6d6d6d;
-  border-radius: 5px;
+  border-radius: $radius;
   margin-left: 8px;
   list-style: none;
   position: relative;
   display: flex;
-  flex-direction: column; }
-
+  flex-direction: column;
+}
 .column-add-card {
   cursor: pointer;
   margin: 20px 8px;
   display: block;
   padding: 10px;
-  font-size: 17px; }
-
+  font-size: 17px;
+}
 .create-column {
   padding: 20px;
-  font-size: 20px; }
-
+  font-size: 20px;
+}
 .card {
-  box-sizing: border-box;
+  box-sizing: $box;
   display: block;
   height: 60px;
   margin-bottom: 5px;
   padding: 4px;
   overflow: hidden;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(225, 225, 225, 0.5);
-  border-radius: 5px; }
-
+  background-color: rgba(0,0,0,0.2);
+  border: $border;
+  border-radius: $radius;
+}
 .card-list {
   list-style: none;
   margin: 5px;
-  padding: 0px; }
-
+  padding: 0px;
+}
 .card-description {
   margin: 2px 0;
-  text-align: center; }
-
+  text-align: center;
+}
 .card-placeholder {
-  box-sizing: border-box;
+  box-sizing: $box;
   display: block;
   height: 60px;
   margin-bottom: 5px;
   border: 2px solid #d3d3d3;
   background-color: #ADD8E6;
-  border-radius: 5px; }
-
-/*# sourceMappingURL=style.css.map */
+  border-radius: $radius;
+}
